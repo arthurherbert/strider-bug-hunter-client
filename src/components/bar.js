@@ -3,8 +3,8 @@ import './main.css';
 
 const BarStack = ({ type, count }) => {
   const className = `app-bar-stack ${
-    type === 'Erros'
-      ? 'app-bar-stack--error'
+    type === 'Problemas'
+      ? 'app-bar-stack--problem'
       : type === 'Sugestões'
       ? 'app-bar-stack--suggestion'
       : 'app-bar-stack--bug'
@@ -20,7 +20,7 @@ const BarStack = ({ type, count }) => {
 export const Bar = ({ team, maxHeight }) => {
   const bugs = [];
   const suggestions = [];
-  const errors = [];
+  const problems = [];
   team.events.forEach(event => {
     if (event.type === 'BUG') {
       bugs.push(event);
@@ -28,14 +28,14 @@ export const Bar = ({ team, maxHeight }) => {
     if (event.type === 'SUGGESTION') {
       suggestions.push(event);
     }
-    if (event.type === 'ERROR') {
-      errors.push(event);
+    if (event.type === 'PROBLEM') {
+      problems.push(event);
     }
   });
   return (
     <div className="app-bar" style={{ height: maxHeight }}>
       <p className="app-bar-label">{team.name}</p>
-      {errors.length > 0 && <BarStack type={'Erros'} count={errors.length} />}
+      {problems.length > 0 && <BarStack type={'Problemas'} count={problems.length} />}
       {suggestions.length > 0 && <BarStack type={'Sugestões'} count={suggestions.length} />}
       {bugs.length > 0 && <BarStack type={'Bugs'} count={bugs.length} />}
     </div>

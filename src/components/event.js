@@ -3,8 +3,8 @@ import './main.css';
 
 export const Event = ({ event }) => {
   const className = `app-event ${
-    event.type === 'ERROR'
-      ? 'app-event--error'
+    event.type === 'PROBLEM'
+      ? 'app-event--problem'
       : event.type === 'SUGGESTION'
       ? 'app-event--suggestion'
       : 'app-event--bug'

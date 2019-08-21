@@ -89,11 +89,11 @@ h3 {
   transition: all 1s ease;
 }
 
-.app-bar-stack.app-bar-stack--error {
-  background-color: #f85555;
+.app-bar-stack.app-bar-stack--problem {
+  background-color: #55c2f8;
 }
 .app-bar-stack.app-bar-stack--bug {
-  background-color: #55c2f8;
+  background-color: #f85555;
 }
 .app-bar-stack.app-bar-stack--suggestion {
   background-color: #069e5f;
@@ -111,11 +111,11 @@ h3 {
   border-left: 8px solid;
 }
 
-.app-event.app-event--error {
-  border-color: #f85555;
+.app-event.app-event--problem {
+  border-color: #55c2f8;
 }
 .app-event.app-event--bug {
-  border-color: #55c2f8;
+  border-color: #f85555;
 }
 .app-event.app-event--suggestion {
   border-color: #069e5f;
