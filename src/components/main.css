@@ -21,7 +21,7 @@
 
 .app-x-axis {
   height: 40px;
-  width: 100%;
+  width: calc(100% - 55px);
   align-self: flex-end;
 }
 
