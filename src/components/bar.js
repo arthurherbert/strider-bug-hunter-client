@@ -35,9 +35,9 @@ export const Bar = ({ team, maxHeight }) => {
   return (
     <div className="app-bar" style={{ height: maxHeight }}>
       <p className="app-bar-label">{team.name}</p>
-      <BarStack type={'Erros'} count={errors.length} />
-      <BarStack type={'Sugestões'} count={suggestions.length} />
-      <BarStack type={'Bugs'} count={bugs.length} />
+      {errors.length > 0 && <BarStack type={'Erros'} count={errors.length} />}
+      {suggestions.length > 0 && <BarStack type={'Sugestões'} count={suggestions.length} />}
+      {bugs.length > 0 && <BarStack type={'Bugs'} count={bugs.length} />}
     </div>
   );
 };

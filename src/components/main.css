@@ -6,6 +6,33 @@
   height: calc(100vh - 24px);
 }
 
+.app-axis-container {
+  display: flex;
+  width: 80%;
+  height: 100%;
+}
+
+.app-last-events-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 20%;
+  height: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  position: relative;
+  padding: 0 12px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.app-container button {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
 .app-y-axis {
   display: flex;
   align-items: center;
@@ -17,47 +44,45 @@
 
 .app-y-axis > p {
   transform: rotate(-90deg);
+  font-size: 18px;
 }
 
 .app-x-axis {
   height: 40px;
   width: calc(100% - 55px);
   align-self: flex-end;
-}
-
-.app-y-axis > p,
-.app-x-axis > p {
   font-size: 18px;
 }
 
 .app-bars {
   position: absolute;
   display: flex;
-  width: calc(100% - 60px);
+  width: calc(80% - 100px);
   height: calc(100% - 60px);
-  right: 12px;
+  left: 50px;
   overflow-x: auto;
 }
 
 .app-bars .app-bar {
   height: 100%;
   flex: 1 1;
-  max-width: 20%;
+  max-width: 100px;
   padding: 0 20px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column-reverse;
   align-self: flex-end;
-  min-width: 300px;
+  min-width: 100px;
+  transition: all 1s ease;
 }
 
 .app-bar-stack {
   width: 100%;
   color: #fff;
-  font-weight: 700;
   height: 10%;
   min-height: 84px;
+  transition: all 1s ease;
 }
 
 .app-bar-stack.app-bar-stack--error {
@@ -68,4 +93,62 @@
 }
 .app-bar-stack.app-bar-stack--suggestion {
   background-color: #069e5f;
+}
+
+.app-event {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: calc(100% - 24px);
+  padding: 8px;
+  box-shadow: 0px 4px 12px rgba(112, 115, 116, 0.3);
+  border-radius: 4px;
+  margin-bottom: 12px;
+  border-left: 8px solid;
+}
+
+.app-event.app-event--error {
+  border-color: #f85555;
+}
+.app-event.app-event--bug {
+  border-color: #55c2f8;
+}
+.app-event.app-event--suggestion {
+  border-color: #069e5f;
+}
+
+.app-event .app-event-created-at {
+  color: #707374;
+}
+
+.app-event-created-at {
+  color: #707374;
+}
+
+.app-event-user,
+.app-event-team {
+  text-align: left;
+  margin-top: 12px;
+}
+.app-event-team p {
+  font-weight: 500;
+  margin: 0;
+}
+
+.app-event-user p {
+  margin: 0;
+}
+.app-event-user > p:first-child {
+  font-weight: 500;
+  font-size: 14px;
+}
+.app-event-description {
+  width: 100%;
+  text-align: left;
+}
+.app-event-description p {
+  width: calc(100% - 12px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
