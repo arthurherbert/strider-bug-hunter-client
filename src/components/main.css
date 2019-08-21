@@ -36,6 +36,7 @@
   width: calc(100% - 60px);
   height: calc(100% - 60px);
   right: 12px;
+  overflow-x: auto;
 }
 
 .app-bars .app-bar {
@@ -48,7 +49,7 @@
   align-items: center;
   flex-direction: column-reverse;
   align-self: flex-end;
-  min-width: 200px;
+  min-width: 300px;
 }
 
 .app-bar-stack {
