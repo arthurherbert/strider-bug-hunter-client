@@ -48,6 +48,7 @@
   align-items: center;
   flex-direction: column-reverse;
   align-self: flex-end;
+  min-width: 200px;
 }
 
 .app-bar-stack {
