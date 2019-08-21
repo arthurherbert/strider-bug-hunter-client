@@ -25,7 +25,7 @@ export const Bar = ({ team, maxHeight }) => {
     if (event.type === 'BUG') {
       bugs.push(event);
     }
-    if (event.type === 'SUGGESTIONS') {
+    if (event.type === 'SUGGESTION') {
       suggestions.push(event);
     }
     if (event.type === 'ERROR') {
