@@ -1,0 +1,69 @@
+.app-container {
+  display: flex;
+  padding: 12px;
+  overflow: hidden;
+  width: calc(100vw - 24px);
+  height: calc(100vh - 24px);
+}
+
+.app-y-axis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 24px;
+  white-space: nowrap;
+}
+
+.app-y-axis > p {
+  transform: rotate(-90deg);
+}
+
+.app-x-axis {
+  height: 40px;
+  width: 100%;
+  align-self: flex-end;
+}
+
+.app-y-axis > p,
+.app-x-axis > p {
+  font-size: 18px;
+}
+
+.app-bars {
+  position: absolute;
+  display: flex;
+  width: calc(100% - 60px);
+  height: calc(100% - 60px);
+  right: 12px;
+}
+
+.app-bars .app-bar {
+  height: 100%;
+  flex: 1 1;
+  max-width: 20%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column-reverse;
+  align-self: flex-end;
+}
+
+.app-bar-stack {
+  width: 100%;
+  color: #fff;
+  font-weight: 700;
+  height: 10%;
+  min-height: 84px;
+}
+
+.app-bar-stack.app-bar-stack--error {
+  background-color: #f85555;
+}
+.app-bar-stack.app-bar-stack--bug {
+  background-color: #55c2f8;
+}
+.app-bar-stack.app-bar-stack--suggestion {
+  background-color: #069e5f;
+}
